@@ -16,7 +16,7 @@ namespace Microsoft.AspNet.SignalR
         /// IsAuthenticated for any clients that invoke server-side hub methods or receive client-side hub method invocations. 
         /// </summary>
         /// <param name="options">The <see cref="HubOptions" /> to which the <see cref="AuthorizeModule" /> will be added.</param>
-        public static void RequireAuthentication([NotNull]this HubOptions options)
+        public static void RequireAuthentication(this HubOptions options)
         {
             var authorizer = new AuthorizeAttribute();
             options.PipelineModules.Add(new AuthorizeModule(globalConnectionAuthorizer: authorizer, globalInvocationAuthorizer: authorizer));

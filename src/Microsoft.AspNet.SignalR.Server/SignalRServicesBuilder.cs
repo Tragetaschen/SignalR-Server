@@ -9,7 +9,7 @@ namespace Microsoft.Framework.DependencyInjection
     {
         private readonly IServiceCollection _serviceCollection;
 
-        public SignalRServicesBuilder([NotNull] IServiceCollection serviceCollection)
+        public SignalRServicesBuilder(IServiceCollection serviceCollection)
         {
             _serviceCollection = serviceCollection;
         }
